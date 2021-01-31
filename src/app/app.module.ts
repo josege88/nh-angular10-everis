@@ -20,6 +20,7 @@ import { SuscriptionInlineFormComponent } from './components/suscription-inline-
 import { ReserveBookFormComponent } from './components/reserve-book-form/reserve-book-form.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { MessageErrorComponent } from './components/register-form/message-error/message-error.component';
+import { BookSelectComponent } from './components/book-select/book-select.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { MessageErrorComponent } from './components/register-form/message-error/
     ReserveBookFormComponent,
     RegisterFormComponent,
     MessageErrorComponent,
+    BookSelectComponent,
   ],
   imports: [
     BrowserModule,

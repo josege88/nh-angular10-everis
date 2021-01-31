@@ -11,11 +11,15 @@ export class BookListExampleComponent implements OnInit {
 
   books: IBook[];
   selectedBooks: IBook[];
+  selectedBooks2: IBook;
+  nameBook: string;
+  numeroRepeticiones: number;
   constructor() { }
 
   ngOnInit(): void {
     this.books = this.fetchBook();
     this.selectedBooks = [];
+    this.selectedBooks2 = null;
   }
 
   fetchBook(): IBook[] {
@@ -26,4 +30,17 @@ export class BookListExampleComponent implements OnInit {
     this.selectedBooks.push(book);
   }
 
+  selectBook2(book: IBook): void {
+    // this.selectedBooks2 = book;
+    this.nameBook = book.name;
+
+    let result = this.selectedBooks.filter(obj => {
+      return obj.name === this.nameBook
+    })
+
+    this.numeroRepeticiones = result.length
+
+    console.log(this.numeroRepeticiones);
+
+}
 }
